@@ -1,0 +1,14 @@
+CREATE TRIGGER mission_before_insert
+BEFORE INSERT ON mission
+FOR EACH ROW
+  SET NEW.mission_id = IF(
+    (
+      SELECT COUNT(mission_id) 
+        FROM mission 
+        where reservation_id = new.reservation_id 
+        group by reservation_id
+          
+    ) < 10000,
+    NEW.mission_id,
+    NULL
+  );

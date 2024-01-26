@@ -1,0 +1,31 @@
+use db_353_2;
+
+create table Emp(
+	eid integer,
+    ename CHAR(20),
+    age integer,
+    salary real,
+    primary key (eid)
+);
+
+create table Dept(
+	did integer,
+    dname CHAR(20),
+    budget real,
+    managerid integer,    
+    primary key (did),
+    foreign key (managerid) 
+		references Emp(eid)
+);
+
+create table Works(
+	eid integer,
+	did integer,
+    pct_time integer,
+    primary key (eid, did),
+    foreign key (eid)
+		references Emp(eid),
+	foreign key (did)
+		references Dept(did)
+);
+

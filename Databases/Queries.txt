@@ -1,0 +1,99 @@
+use rentrack;
+-- 1
+select * from 
+CUSTOMER
+where is_business = true;
+
+-- 2
+select customer_id, count(reservation_id) from 
+RESERVATION 
+group by customer_id
+having count(reservation_id) > 1;
+
+
+-- 3
+
+select distinct m.vehicle_id, v.type,v.brand,m.driver_id, d.first_name ,d.last_name from 
+MISSION m, DRIVER d, VEHICLE v
+where v.vehicle_id = m.vehicle_id and
+m.driver_id = d.driver_id 
+
+order by vehicle_id,driver_id;
+
+
+/*select m.vehicle_id, ,m.driver_id, count(mission_id) from 
+MISSION m
+group by vehicle_id, driver_id
+having count(mission_id) >= 1
+order by vehicle_id,driver_id;   */
+
+-- 4 
+select m.mission_id, m.vehicle_id, v.type, v.brand, d.driver_id, d.first_name, d.last_name from 
+MISSION m, VEHICLE v, DRIVER d
+where
+m.vehicle_id = v.vehicle_id and 
+m.driver_id = d.driver_id and
+start_date_time >= '2022-03-11 00:00:00' and end_date_time <='2022-03-18 23:59:00';
+
+-- 5
+select c.customer_id, c.name as customer_name, l.line_invoice_mission_id,
+       l.line_invoice_reservation_id, l.is_paid from
+       CUSTOMER c, RESERVATION r, MISSION m, LINE_INVOICE l
+where 
+c.customer_id = r.customer_id and 
+r.reservation_id = m.reservation_id and 
+m.mission_id = l.line_invoice_mission_id  and 
+m.reservation_id = l.line_invoice_reservation_id  and
+l.is_paid = false;
+
+-- 6
+select d.driver_id, d.first_name, d.last_name, m.mission_id, v.vehicle_id, v.brand  from 
+MISSION m, VEHICLE v, DRIVER d
+where v.vehicle_id = m.vehicle_id and m.driver_id = d.driver_id and brand ='GMC';
+
+
+-- 7 
+select distinct c.name as customer_name, l.rental_cost  from 
+CUSTOMER c, RESERVATION r, MISSION m, LINE_INVOICE l
+where c.customer_id = r.customer_id and 
+      r.reservation_id = m.reservation_id and 
+      m.mission_id = l.line_invoice_mission_id  and
+      m.reservation_id = l.line_invoice_reservation_id  and
+      l.rental_cost > 1000;
+
+-- 8
+ 
+     
+select c.customer_id,c.name , count(l.line_invoice_mission_id  + l.line_invoice_reservation_id) from 
+CUSTOMER c, RESERVATION r, MISSION m, LINE_INVOICE l
+where c.customer_id = r.customer_id and 
+      r.reservation_id = m.reservation_id and 
+      m.mission_id = l.line_invoice_mission_id  and
+      m.reservation_id = l.line_invoice_reservation_id  
+group by c.customer_id,c.name ;
+
+-- 9 
+select  distinct d.first_name, d.last_name from 
+DRIVER d, MISSION m, LINE_INVOICE l
+where d.driver_id = m.driver_id and m.mission_id = l.line_invoice_mission_id  and 
+m.reservation_id = l.line_invoice_reservation_id  and 
+m.start_date_time >= '2022-02-01 00:00:00' and m.end_date_time <= '2022-03-31 23:59:59' and 
+l.odometer_end > 7000; 
+
+
+-------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

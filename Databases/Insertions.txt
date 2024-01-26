@@ -1,0 +1,145 @@
+use rentrack;
+-- CUSTOMER
+select * from customer;
+insert into customer values ('11111111', 'Bob', '1000000001', '123 Park', 1);
+insert into customer values ('11111112', 'Jack', '1000000002', '124 Park', 1);
+insert into customer values ('11111113', 'Julie', '1000000003', '125 Park', 0);
+insert into customer values ('11111114', 'Fred', '1000000004', '126 Park', 1);
+insert into customer values ('11111115', 'Lucas', '1000000005', '127 Park', 1);
+insert into customer values ('11111116', 'Justin', '1000000006', '128 Park', 1);
+insert into customer values ('11111117', 'Steven', '1000000007', '129 Park', 0);
+insert into customer values ('11111118', 'Frank', '1000000008', '133 Park', 1);
+insert into customer values ('11111119', 'Oliver', '1000000009', '143 Park', 1);
+insert into customer values ('11111110', 'Carl', '1000000000', '153 Park', 1);
+
+-- RESERVATION
+insert into reservation values ('22222222', '11111111', '2022-06-01', '2022-09-01');
+insert into reservation values ('22222223', '11111112', '2022-01-01', '2022-06-01');
+insert into reservation values ('22222224', '11111113', '2022-02-01', '2022-05-01');
+insert into reservation values ('22222225', '11111114', '2022-03-01', '2022-07-01');
+insert into reservation values ('22222226', '11111115', '2022-04-01', '2022-11-01');
+insert into reservation values ('22222227', '11111116', '2022-05-01', '2022-08-01');
+insert into reservation values ('22222228', '11111117', '2022-06-01', '2022-12-01');
+insert into reservation values ('22222229', '11111118', '2022-07-01', '2022-11-01');
+insert into reservation values ('22222220', '11111119', '2022-04-01', '2022-09-01');
+insert into reservation values ('22222221', '11111110', '2022-08-01', '2022-12-01');
+--------
+--------
+insert into reservation values ('22222230', '11111111', '2022-06-01', '2022-09-01');
+insert into reservation values ('22222231', '11111111', '2022-01-01', '2022-06-01');
+insert into reservation values ('22222232', '11111111', '2022-02-01', '2022-05-01');
+insert into reservation values ('22222233', '11111114', '2022-03-01', '2022-07-01');
+insert into reservation values ('22222234', '11111114', '2022-04-01', '2022-11-01');
+insert into reservation values ('22222235', '11111118', '2022-05-01', '2022-08-01');
+insert into reservation values ('22222236', '11111118', '2022-06-01', '2022-12-01');
+insert into reservation values ('22222237', '11111118', '2022-07-01', '2022-11-01');
+insert into reservation values ('22222238', '11111118', '2022-04-01', '2022-09-01');
+
+
+-- VEHICLE
+insert into vehicle values ('44444444', 'heavyweight', 'Ford');
+insert into vehicle values ('44444445', 'tourism', 'Ford');
+insert into vehicle values ('44444446', 'super heavyweight', 'GMC');
+insert into vehicle values ('44444447', 'heavyweight', 'Chevrolet');
+insert into vehicle values ('44444448', 'heavyweight', 'Ford');
+insert into vehicle values ('44444449', 'heavyweight', 'GMC');
+insert into vehicle values ('44444440', 'super heavyweight', 'GMC');
+insert into vehicle values ('44444441', 'heavyweight', 'Ford');
+insert into vehicle values ('44444442', 'heavyweight', 'Chevrolet');
+insert into vehicle values ('44444443', 'tourism', 'Ford');
+-------
+insert into vehicle values ('44444450', 'heavyweight', 'Chevrolet');
+insert into vehicle values ('44444451', 'super heavyweight', 'GMC');
+insert into vehicle values ('44444452', 'tourism', 'Ford');
+insert into vehicle values ('44444453', 'heavyweight', 'GMC');
+
+
+-- DRIVER
+insert into driver values ('55555555', 'John', 'Doe');
+insert into driver values ('55555556', 'Kane', 'Rice');
+insert into driver values ('55555557', 'Lee', 'Henry');
+insert into driver values ('55555558', 'Zack', 'Baker');
+insert into driver values ('55555559', 'Calvin', 'Arnold');
+insert into driver values ('55555550', 'Ralph', 'Grant');
+insert into driver values ('55555551', 'Yusuf', 'Miller');
+insert into driver values ('55555552', 'Dan', 'McCoy');
+insert into driver values ('55555553', 'Theo', 'Solis');
+insert into driver values ('55555554', 'Eden', 'Garza');
+-----------
+insert into driver values ('55555560', 'Andy', 'Brown');
+insert into driver values ('55555561', 'Andrew', 'Jones');
+insert into driver values ('55555562', 'Lara', 'Davis');
+insert into driver values ('55555563', 'Robert', 'Miller');
+insert into driver values ('55555564', 'James', 'Smith');
+
+
+-- LICENSE
+insert into license values ('66666666', '55555555', 'heavyweight');
+insert into license values ('66666667', '55555556', 'heavyweight');
+insert into license values ('66666668', '55555557', 'super heavyweight');
+insert into license values ('66666669', '55555558', 'heavyweight');
+insert into license values ('66666660', '55555559', 'tourism');
+insert into license values ('66666661', '55555550', 'heavyweight');
+insert into license values ('66666662', '55555551', 'super heavyweight');
+insert into license values ('66666663', '55555552', 'heavyweight');
+insert into license values ('66666664', '55555553', 'tourism');
+insert into license values ('66666665', '55555554', 'heavyweight');
+--------
+insert into license values ('66666670', '55555560', 'tourism');
+insert into license values ('66666671', '55555561', 'heavyweight');
+insert into license values ('66666672', '55555562', 'tourism');
+insert into license values ('66666673', '55555563', 'super heavyweight');
+insert into license values ('66666674', '55555564', 'tourism');
+
+-- MISSION
+select * from mission order by mission_id;
+insert into mission values ('33333333', '22222222', '44444444', '55555555', '2022-06-01 06:00:00', '2022-06-01 06:00:00', '2022-06-04 18:00:00', '111 Vandome Close');
+insert into mission values ('33333334', '22222223', '44444446', '55555556', '2022-01-01 06:00:00', '2022-01-01 06:00:00', '2022-01-05 18:00:00', '222 Old Forge Cliff');
+insert into mission values ('33333335', '22222224', '44444445', '55555559', '2022-02-01 06:00:00', '2022-02-01 06:00:00', '2022-02-04 18:00:00', '333 Chegwell Drive');
+insert into mission values ('33333336', '22222225', '44444447', '55555557', '2022-03-01 06:00:00', '2022-03-01 06:00:00', '2022-03-02 18:00:00', '444 Park Leas');
+insert into mission values ('33333337', '22222226', '44444448', '55555558', '2022-04-01 06:00:00', '2022-04-01 06:00:00', '2022-04-03 18:00:00', '555 Hill View Parc');
+insert into mission values ('33333338', '22222227', '44444449', '55555550', '2022-05-01 06:00:00', '2022-05-01 06:00:00', '2022-05-02 18:00:00', '666 Martins Lane');
+insert into mission values ('33333339', '22222228', '44444443', '55555553', '2022-06-01 06:00:00', '2022-06-01 06:00:00', '2022-06-04 18:00:00', '777 Oaktree Chase');
+insert into mission values ('33333330', '22222229', '44444440', '55555551', '2022-07-01 06:00:00', '2022-07-01 06:00:00', '2022-07-05 18:00:00', '888 Childscroft Road');
+insert into mission values ('33333331', '22222220', '44444441', '55555552', '2022-04-01 06:00:00', '2022-04-01 06:00:00', '2022-04-03 18:00:00', '999 Thorne Green');
+insert into mission values ('33333332', '22222221', '44444442', '55555554', '2022-08-01 06:00:00', '2022-08-01 06:00:00', '2022-08-04 18:00:00', '100 Hunt Links');
+insert into mission values ('33333340', '22222222', '44444444', '55555555', '2022-07-01 06:00:00', '2022-07-01 06:00:00', '2022-07-02 18:00:00', '1111 Quantock Valley');
+insert into mission values ('33333341', '22222223', '44444446', '55555556', '2022-04-01 06:00:00', '2022-04-01 06:00:00', '2022-04-03 18:00:00', '2222 Ricardo Road');
+insert into mission values ('33333342', '22222224', '44444445', '55555559', '2022-03-01 06:00:00', '2022-03-01 06:00:00', '2022-03-03 18:00:00', '3333 East Heath');
+insert into mission values ('33333343', '22222225', '44444447', '55555557', '2022-05-01 06:00:00', '2022-05-01 06:00:00', '2022-05-01 18:00:00', '4444 St James Springs');
+insert into mission values ('33333344', '22222226', '44444448', '55555558', '2022-09-01 06:00:00', '2022-09-01 06:00:00', '2022-09-05 18:00:00', '5555 Coach House Place');
+------------------------
+
+insert into mission values ('33333345', '22222230', '44444448', '55555558', '2022-03-11 06:00:00', '2022-03-11 06:00:00', '2022-03-15 23:00:00', '5555 Coach House Place');
+insert into mission values ('33333346', '22222231', '44444446', '55555556', '2022-03-12 06:00:00', '2022-03-12 06:00:00', '2022-03-16 20:00:00', '4444 St James Springs');
+insert into mission values ('33333347', '22222232', '44444445', '55555559', '2022-03-13 06:00:00', '2022-03-13 06:00:00', '2022-03-17 18:00:00', '100 Hunt Links');
+insert into mission values ('33333348', '22222233', '44444443', '55555553', '2022-03-14 06:00:00', '2022-03-14 06:00:00', '2022-03-18 23:59:00', '888 Childscroft Road');
+insert into mission values ('33333349', '22222234', '44444446', '55555556', '2022-03-11 06:00:00', '2022-03-11 06:00:00', '2022-03-12 06:00:00', '666 Martins Lane');
+insert into mission values ('33333350', '22222235', '44444447', '55555557', '2022-03-11 06:00:00', '2022-03-11 06:00:00', '2022-03-13 06:00:00', '5555 Coach House Place');
+insert into mission values ('33333351', '22222236', '44444448', '55555558', '2022-03-13 06:00:00', '2022-03-13 06:00:00', '2022-03-14 06:00:00', '3333 East Heath');
+insert into mission values ('33333352', '22222237', '44444449', '55555550', '2022-03-11 06:00:00', '2022-03-11 06:00:00', '2022-03-12 06:00:00', '5555 Coach House Place');
+insert into mission values ('33333353', '22222238', '44444441', '55555552', '2022-03-14 06:00:00', '2022-03-14 06:00:00', '2022-03-18 06:00:00', '999 Thorne Green');
+
+--------------------------
+
+
+
+
+-- LINE_INVOICE
+select * from line_invoice;
+insert into line_invoice values ('33333333', '22222222', '2022-06-01 06:00:00', '2022-06-04 18:00:00', '100000', '100100', '1350.00', 'cash', 1);
+insert into line_invoice values ('33333334', '22222223', '2022-01-01 06:00:00', '2022-01-05 18:00:00', '100100', '100600', '5450.00', 'credit card', 1);
+insert into line_invoice values ('33333335', '22222224', '2022-02-01 06:00:00', '2022-02-04 18:00:00', '100200', '100300', '1350.00', 'credit card', 0);
+insert into line_invoice values ('33333336', '22222225', '2022-03-01 06:00:00', '2022-03-02 18:00:00', '100300', '100800', '5150.00', 'check', 1);
+insert into line_invoice values ('33333337', '22222226', '2022-04-01 06:00:00', '2022-04-03 18:00:00', '100400', '100900', '5250.00', 'credit card', 1);
+insert into line_invoice values ('33333338', '22222227', '2022-05-01 06:00:00', '2022-05-02 18:00:00', '100500', '100700', '2150.00', 'credit card', 1);
+insert into line_invoice values ('33333339', '22222228', '2022-06-01 06:00:00', '2022-06-04 18:00:00', '100600', '100800', '4350.00', 'check', 1);
+insert into line_invoice values ('33333330', '22222229', '2022-07-01 06:00:00', '2022-07-05 18:00:00', '100700', '100900', '2450.00', 'cash', 0);
+insert into line_invoice values ('33333331', '22222220', '2022-04-01 06:00:00', '2022-04-03 18:00:00', '100800', '101000', '3250.00', 'credit card', 1);
+insert into line_invoice values ('33333332', '22222221', '2022-08-01 06:00:00', '2022-08-04 18:00:00', '100900', '101100', '2350.00', 'cash', 1);
+insert into line_invoice values ('33333340', '22222222', '2022-07-01 06:00:00', '2022-07-02 18:00:00', '100100', '100500', '4150.00', 'credit card', 1);
+insert into line_invoice values ('33333341', '22222223', '2022-04-01 06:00:00', '2022-04-03 18:00:00', '100600', '100800', '2250.00', 'credit card', 1);
+insert into line_invoice values ('33333342', '22222224', '2022-03-01 06:00:00', '2022-03-03 18:00:00', '100500', '100800', '3250.00', 'check', 1);
+insert into line_invoice values ('33333343', '22222225', '2022-05-01 06:00:00', '2022-05-01 18:00:00', '101000', '101400', '4050.00', 'cash', 1);
+insert into line_invoice values ('33333344', '22222226', '2022-09-01 06:00:00', '2022-09-05 18:00:00', '107000', '107300', '3450.00', 'credit card', 0);
+
