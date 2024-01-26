@@ -1,0 +1,314 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /*background-image: url("./assets/images/logo.png");*/
+  background-color: rgb(5, 5, 58);
+  background-size: cover;
+  margin: 50px 50px 50px 50px;
+  text-align: center;
+
+  /*display: flex;*/
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 62px;
+
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #180551;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff;
+}
+
+h2 {
+  font-size: 22px;
+  margin-top: 30px;
+  color: rgba(236, 238, 240, 0.721);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin-bottom: 50px;
+}
+
+h3 {
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 5px;
+  color: #180551;
+}
+
+h4 {
+  font-size: 20px;
+  margin-top: 30px;
+  text-align: left;
+  margin-left: 30px;
+
+  color: #180551;
+}
+.relevantc {
+  text-align: left;
+  margin: 0px 100px 0px 100px;
+
+  font-size: 20px;
+
+  color: #180551;
+}
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  color: rgba(236, 238, 240, 0.721);
+  text-align: justify;
+}
+
+.paragraphs {
+  margin-top: 30px;
+  color: rgb(12, 14, 84);
+  font-size: 18px;
+  font-weight: 600;
+  margin: 20px 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+
+  text-justify: inter-word;
+}
+
+.courses {
+  color: rgb(12, 14, 84);
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 90px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 550px 550px;
+}
+.column {
+  padding: 15px;
+  margin: 0 20px;
+  height: 250px;
+}
+
+.listtools {
+  margin: 0 60px;
+  list-style: none;
+}
+
+.compskills {
+  margin-top: 30px;
+  line-height: 2;
+  color: rgb(12, 14, 84);
+  font-size: 18px;
+  font-weight: 600;
+  margin: 20px 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+
+  text-justify: inter-word;
+}
+
+.element {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  text-align: center;
+  display: inline;
+  padding: 20px 20px;
+  font-weight: bold;
+  font-size: large;
+  cursor: pointer;
+
+  color: #fff;
+}
+
+.alllinks {
+  height: 100px;
+  color: aliceblue;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.aboutmesection {
+  height: 300px;
+  background-color: #cccff3;
+  border-radius: 30px;
+}
+
+.educationsection img {
+  float: left;
+  margin-left: 30px;
+  margin-top: 30px;
+  margin-right: 30px;
+}
+
+.awardsection {
+  float: left;
+  margin-left: 30px;
+  margin-top: 30px;
+  margin-right: 30px;
+}
+
+.educationparag {
+  font-size: 15px;
+  text-align: left;
+  margin-left: 30px;
+  padding: 5px 100px;
+  color: rgb(12, 14, 84);
+  font-weight: 600;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.educationnewparag {
+  font-size: 15px;
+  text-align: left;
+  margin-left: -70px;
+  padding: 5px 100px;
+  color: rgb(12, 14, 84);
+  font-weight: 600;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.educationsection {
+  height: 450px;
+  background-color: #cccff3;
+  border-radius: 30px;
+}
+
+.projectssection {
+  height: 1730px;
+  background-color: #cccff3;
+  border-radius: 30px;
+}
+
+.skillssection {
+  height: 560px;
+  background-color: #cccff3;
+  border-radius: 30px;
+}
+
+.achievementssection {
+  height: 170px;
+  background-color: #cccff3;
+  border-radius: 30px;
+}
+.achievementssection img {
+  float: left;
+  margin-left: 30px;
+  margin-top: 30px;
+  margin-right: 30px;
+}
+.developmentsection {
+  height: 450px;
+  background-color: #cccff3;
+  border-radius: 30px;
+}
+.developmentsection img {
+  float: left;
+  margin-left: 30px;
+  margin-top: 30px;
+  margin-right: 30px;
+}
+
+.buttonapp {
+  border: none;
+  background-color: #1c125c;
+  font-size: 15px;
+  padding: 6px 6px;
+  border-radius: 100px;
+  border-style: hidden;
+  color: inherit;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  align-items: center;
+
+  margin-top: -5px;
+  margin-right: 5px;
+}
+
+.imgandroid {
+  /*margin-bottom: 30px;*/
+  /*margin-top: 30px;*/
+
+  float: left;
+  width: 120px;
+  height: 120px;
+  border: 3px solid white;
+  border-radius: 10px;
+  margin-right: 15px;
+  margin-left: -100px;
+  margin-top: 12px;
+  /*margin: 0px 0px 15px 20px;*/
+}
+
+.happ {
+  /*text-align: left;*/
+  /* padding-left: 210px;*/
+
+  margin: 60px auto;
+  width: 70%;
+}
+
+.boxtext {
+  color: azure;
+  text-align: left;
+}
+
+.androidtitle {
+  font-size: 20px;
+
+  color: #180551;
+}
+
+.listofdesc {
+  margin-top: 30px;
+  color: rgb(12, 14, 84);
+  font-size: 15px;
+  font-weight: 600;
+  margin: 10px 50px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: justify;
+
+  text-justify: inter-word;
+}
+
+.listscapstone {
+  margin-left: 200px;
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 15px;
+}
+
+@media (max-width: 900px) {
+  .main {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  #root {
+    padding: 24px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .fact-form {
+    padding: 16px;
+  }
+
+  .fact {
+    padding: 12px 16px;
+  }
+}
